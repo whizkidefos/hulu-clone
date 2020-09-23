@@ -1,0 +1,51 @@
+.nav {
+    color: white;
+    display: flex;
+    overflow-x: scroll;
+    padding: 10px;
+}
+
+/* Hide scrollbar for chrome, safari and opera */
+.nav::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.nav {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.nav h3 {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 15px;
+    opacity: 0.7;
+    transition: transform 50ms ease-out;
+}
+
+.nav h3:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1040px) {
+    .nav {
+        flex-direction: column;
+        position: fixed;
+        z-index: 10;
+        top: 8rem;
+        background: #051421be;
+    }
+
+    .nav h3 {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .nav h3:hover {
+        background: #020b13;
+        color: white;
+    }
+}
